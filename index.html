@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeBusca</title>
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .btn-text {
+            margin-right: 10px;
+        }
+
+        .pokemon-icon {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <center>
+                <h1><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                        alt="Pikachu" class="pokemon-icon"> Buscador de Pokemones</h1>
+            </center>
+        </center>
+        <div class="input-group mb-3">
+            <input type="text" id="txt-buscar" class="form-control" placeholder="Buscar..." aria-label="Buscar"
+                aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary btn-text" type="button" id="btn-texto">Buscar por texto</button>
+                <button class="btn btn-secondary" type="button" id="button-addon3">Buscar por voz</button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="imagen_pokemon"></div>
+        </div>
+    </div>
+    <!--
+    <script>
+        document.getElementById('button-addon2').addEventListener('click', function () {
+            var query = document.querySelector('.form-control').value;
+            document.getElementById('results').innerHTML = '<p>Resultados para: ' + query + '</p>';
+            // Aquí podrías realizar una búsqueda real utilizando AJAX por ejemplo
+        });
+
+        document.getElementById('button-addon3').addEventListener('click', function () {
+            // Aquí podrías implementar la búsqueda por voz utilizando la API de reconocimiento de voz
+            alert('Funcionalidad de búsqueda por voz aún no implementada');
+        });
+    </script>
+-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
