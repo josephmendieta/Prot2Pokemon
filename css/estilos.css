@@ -193,3 +193,9 @@ ul li {
     background-color: #333333; /* Black */
     border-color: #333333; /* Black */
 }
+
+.btn-black {
+    background-color: black !important;
+    color: white !important;
+    border-color: black;
+}

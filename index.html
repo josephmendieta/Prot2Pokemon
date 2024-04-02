@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeBusca</title>
     <link rel="icon" type="image/png"
-        href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
+    href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </head>
 
 <body>
@@ -19,21 +22,31 @@
             <h1><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu"
                     class="pokemon-icon"> Buscador de Pokémon</h1>
         </center>
-        <div class="input-group mb-3">
-            <input type="text" id="txt-buscar" class="form-control" placeholder="Buscar..." aria-label="Buscar"
-                aria-describedby="button-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary btn-text" type="button" id="btn-texto">Buscar por texto</button>
-                <button class="btn btn-secondary" type="button" id="btn-voz">Buscar por voz</button>
-            </div>
+        <!-- Pantalla Inicial -->
+        <div id="initial-screen" class="text-center">
+            <h2>Bienvenid@ a PokeBusca!</h2>
+            <p>Haz clic en el botón de abajo para empezar a buscar Pokémon.</p>
+            <button class="btn btn-primary" id="btn-start">¡Comenzemos!</button>
         </div>
-        <div class="card">
-            <div class="columna-info row">
-                <div id="nombre-pokemon" class="col-md-12"></div>
-                <center>
-                    <div id="imagen_pokemon" class="col-md-12"></div>
-                </center>
-                <div id="pokemon-info" class="pokemon-info col-md-12"></div>
+
+        <!-- Sección de búsqueda de Pokémon (oculta al principio) -->
+        <div id="pokemon-search" style="display: none;">
+            <div class="input-group mb-3">
+                <input type="text" id="txt-buscar" class="form-control" placeholder="Buscar..." aria-label="Buscar"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary btn-text" type="button" id="btn-texto">Buscar por texto</button>
+                    <button class="btn btn-secondary" type="button" id="btn-voz">Buscar por voz</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="columna-info row">
+                    <div id="nombre-pokemon" class="col-md-12"></div>
+                    <center>
+                        <div id="imagen_pokemon" class="col-md-12"></div>
+                    </center>
+                    <div id="pokemon-info" class="pokemon-info col-md-12"></div>
+                </div>
             </div>
         </div>
     </div>
