@@ -69,18 +69,18 @@ document.getElementById("btn-start").addEventListener("click", function () {
     });
 
 // Búsqueda por voz
-$("#btn-voz").on("click", function (){
+$("#btn-voz").on("click", function() {
     var recognition = new webkitSpeechRecognition();
     recognition.lang = "es-ES"; // Establece el idioma a español
     recognition.start();
-    
+
     recognition.onresult = function(event) {
         var resultado = event.results[0][0].transcript.toLowerCase();
         console.log("Resultado de la transcripción:", resultado);
-        if (resultado.includes("buscar pokemon")) {
-            var pokemon = resultado.replace("buscar pokémon ", "").trim();
+        if (resultado.includes("buscar pokémon")) {
+            var pokemon = resultado.replace("buscar pokémon", "").trim(); // Corrige el espacio en blanco
             console.log("Pokémon a buscar:", pokemon);
-            buscarPokemon(pokemon);
+            buscarPokemon(pokemon); // Asegúrate de que esta función esté definida correctamente
         } else {
             Swal.fire({
                 title: 'PokeBusca dice',
@@ -93,10 +93,6 @@ $("#btn-voz").on("click", function (){
             });
         }
     };
-    
 });
-
-
-
 
 });
